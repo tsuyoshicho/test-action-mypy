@@ -20,7 +20,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
           mypy_flags: -v
-          target: test_something.py 
+          target: test_something.py
 
   check:
     runs-on: ubuntu-latest
