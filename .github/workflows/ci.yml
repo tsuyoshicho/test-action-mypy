@@ -19,3 +19,10 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
+
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - run: python check_path.py
