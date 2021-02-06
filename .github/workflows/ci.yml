@@ -19,6 +19,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
+          mypy_flags: -v
 
   check:
     runs-on: ubuntu-latest
