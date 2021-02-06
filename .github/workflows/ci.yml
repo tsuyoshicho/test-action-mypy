@@ -17,7 +17,7 @@ jobs:
       - run: pip install -r requirements.txt
       - uses: tsuyoshicho/action-mypy@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
 
   check:
