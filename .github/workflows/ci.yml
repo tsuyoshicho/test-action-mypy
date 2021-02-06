@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pip install -r requirements.txt
-      - run: mypy .
+      - run: mypy -v test_something.py
 
   action-mypy:
     runs-on: ubuntu-latest
@@ -20,6 +20,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
           mypy_flags: -v
+          target: test_something.py 
 
   check:
     runs-on: ubuntu-latest
